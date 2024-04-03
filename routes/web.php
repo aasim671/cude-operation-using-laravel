@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PersonaldataController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// Routes for individual views
+Route::get('/create', function () {
+    return view('create');
 });
+Route::get('/edit', function () {
+    return view('edit');
+});
+Route::get('/index', function () {
+    return view('index');
+});
+Route::get('/show', function () {
+    return view('show');
+});
+
+// Resourceful route for PersonaldataController
+Route::resource('personaldata', PersonaldataController::class);
