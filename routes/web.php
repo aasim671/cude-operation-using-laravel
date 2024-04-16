@@ -20,16 +20,16 @@ use App\Http\Controllers\PersonaldataController;
 
 // Routes for individual views
 Route::get('/create', function () {
-    return view('create');
+    return view('personaldata.create');
 });
 Route::get('/edit', function () {
-    return view('edit');
+    return view('personaldata.edit');
 });
 Route::get('/index', function () {
-    return view('index');
+    return view('personaldata.index');
 });
 Route::get('/show', function () {
-    return view('show');
+    return view('personaldata.show');
 });
 
 // Resourceful route for PersonaldataController
